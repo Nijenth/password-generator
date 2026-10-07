@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <meta name="description" content="Generate strong, secure passwords instantly with this beautiful password generator tool.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main class="container">
+        <div class="card glass">
+            <h1>Password Generator</h1>
+            <div class="result-container">
+                <span id="result"></span>
+                <button class="btn" id="clipboard" aria-label="Copy to Clipboard" title="Copy to Clipboard">
+                    <i class="far fa-clipboard"></i>
+                </button>
+            </div>
+            
+            <div class="settings">
+                <div class="setting">
+                    <label for="length">Password Length</label>
+                    <span id="length-val">16</span>
+                </div>
+                <input type="range" id="length" min="8" max="20" value="16" aria-label="Password length slider">
+                
+                <div class="setting">
+                    <label class="custom-checkbox">Include Uppercase
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="setting">
+                    <label class="custom-checkbox">Include Lowercase
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="setting">
+                    <label class="custom-checkbox">Include Numbers
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="setting">
+                    <label class="custom-checkbox">Include Symbols
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <button class="btn-large" id="generate">
+                Generate Password
+            </button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
